@@ -11,6 +11,7 @@ class SimpleEncoding:
 
         self.A = np.array([[root ** i for i in range(self.N)] for root in self.roots])  # 构造矩阵A
         self.AT = self.A.T
+        self.AH = np.conj(self.AT)  # 共轭转置矩阵A^H
 
         self.orthogonal_basis = []
         for row in self.AT:
